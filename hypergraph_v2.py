@@ -10,9 +10,9 @@ import numpy as np
 
 
 CSV_FILES = [
-    # "/Users/4c/Desktop/GHQ/data/loto7_4696_k79.csv",
-    # "/Users/4c/Desktop/GHQ/data/loto7_4696_k79_loto_2970.csv",
-    "/Users/4c/Desktop/GHQ/data/loto7_4696_k79_loto_plus_1726.csv",
+    "/data/loto7_4696_k79.csv",
+    # "/data/loto7_4696_k79_loto_2970.csv",
+    # "/data/loto7_4696_k79_loto_plus_1726.csv",
 ]
 
 TOTAL = math.comb(39, 7)
@@ -115,8 +115,8 @@ def evaluate(matrix, start, stop):
     Istorijski ishod:
         E[j]
 
-    Sličnost koristi konkretne zajedničke čvorove odgovarajućih
-    hipergrana. Skor kandidata zavisi od cele istorijske hipergrane.
+    Sličnost koristi konkretne zajedničke čvorove odgovarajućih hipergrana. 
+    Skor kandidata zavisi od cele istorijske hipergrane.
     """
     scores = np.zeros((stop - start, len(CONFIGS)))
 
@@ -365,7 +365,7 @@ if __name__ == "__main__":
 
 """
 {
-  "CSV": "/Users/4c/Desktop/GHQ/data/loto7_4696_k79.csv",
+  "CSV": "/data/loto7_4696_k79.csv",
   "broj_izvlacenja": 4696,
   "poslednja_kombinacija": [
     5,
@@ -378,11 +378,11 @@ if __name__ == "__main__":
   ],
   "NEXT": [
     10,
-    13,
+    x,
     17,
-    26,
+    y,
     36,
-    37,
+    z,
     39
   ],
   "broj_uporedjenih_konfiguracija": 149,
@@ -405,7 +405,7 @@ if __name__ == "__main__":
 
 
 {
-  "CSV": "/Users/4c/Desktop/GHQ/data/loto7_4696_k79_loto_2970.csv",
+  "CSV": "/data/loto7_4696_k79_loto_2970.csv",
   "broj_izvlacenja": 2970,
   "poslednja_kombinacija": [
     4,
@@ -418,11 +418,11 @@ if __name__ == "__main__":
   ],
   "NEXT": [
     2,
-    6,
+    x,
     9,
-    16,
+    y,
     22,
-    33,
+    z,
     37
   ],
   "broj_uporedjenih_konfiguracija": 149,
@@ -445,7 +445,7 @@ if __name__ == "__main__":
 
 
 {
-  "CSV": "/Users/4c/Desktop/GHQ/data/loto7_4696_k79_loto_plus_1726.csv",
+  "CSV": "/data/loto7_4696_k79_loto_plus_1726.csv",
   "broj_izvlacenja": 1726,
   "poslednja_kombinacija": [
     5,
@@ -458,11 +458,11 @@ if __name__ == "__main__":
   ],
   "NEXT": [
     3,
-    13,
+    x,
     19,
-    20,
+    y,
     22,
-    28,
+    z,
     38
   ],
   "broj_uporedjenih_konfiguracija": 149,
@@ -492,9 +492,9 @@ i odvojeno meri rezultat na kasnijim izvlačenjima.
 Nema nasumičnog izbora kombinacije.
 
 CSV	            NEXT	                      Izabrana istorija
-4.696 redova	10, 13, 17, 26, 36, 37, 39	  4 izvlačenja
-2.970 redova	2, 6, 9, 16, 22, 33, 37	     16 izvlačenja
-1.726 redova	3, 13, 19, 20, 22, 28, 38	  5 izvlačenja
+4.696 redova	10, x, 17, y, 36, z, 39	      4 izvlačenja
+2.970 redova	2, x, 9, y, 22, z, 37	     16 izvlačenja
+1.726 redova	3, x, 19, y, 22, z, 38	      5 izvlačenja
 
 
 Provereni su proračun verovatnoća, odsustvo korišćenja budućih redova i ponovljivost rezultata. 
