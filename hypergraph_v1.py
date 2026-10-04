@@ -4,9 +4,9 @@ import math
 import numpy as np
 
 CSV_FILES = [
-    "/Users/4c/Desktop/GHQ/data/loto7_4696_k79.csv",
-    # "/Users/4c/Desktop/GHQ/data/loto7_4696_k79_loto_2970.csv",
-    # "/Users/4c/Desktop/GHQ/data/loto7_4696_k79_loto_plus_1726.csv",
+    "/data/loto7_4696_k79.csv",
+    # "/data/loto7_4696_k79_loto_2970.csv",
+    # "/data/loto7_4696_k79_loto_plus_1726.csv",
 ]
 
 TOTAL = math.comb(39, 7)
@@ -304,25 +304,23 @@ uči iz istorijskih prelaza i pojedinačno ocenjuje kandidatske kombinacije.
 Nema nasumičnog izbora pomoću seed.
 
 CSV	NEXT
-4.696 izvlačenja	6, 10, 12, 13, 23, 32, 39
-2.970 izvlačenja	2, 10, 22, 29, 30, 33, 39
-1.726 izvlačenja	2, 7, 8, 11, 23, 26, 34
+4.696 izvlačenja	6, x, 12, y, 23, z, 39
+2.970 izvlačenja	2, x, 22, y, 30, z, 39
+1.726 izvlačenja	2, x, 8, y, 23, z, 34
 
 
 Pretraga je približna; prediktivna prednost još nije potvrđena testovima. 
 Sve tri CSV putanje su ugrađene. 
+
+
 Potreban je numpy>=2.0
-
-numpy                        1.26.4
-
-Successfully installed numpy-2.4.6
 """
 
 
 
 """
 {
-  "CSV": "/Users/4c/Desktop/GHQ/data/loto7_4696_k79.csv",
+  "CSV": "/data/loto7_4696_k79.csv",
   "broj_izvlacenja": 4696,
   "poslednja": [
     5,
@@ -335,11 +333,11 @@ Successfully installed numpy-2.4.6
   ],
   "NEXT": [
     6,
-    10,
+    x,
     12,
-    13,
+    y,
     23,
-    32,
+    z,
     39
   ],
   "gamma": 0.5,
@@ -360,7 +358,7 @@ Successfully installed numpy-2.4.6
 
 
 {
-  "CSV": "/Users/4c/Desktop/GHQ/data/loto7_4696_k79_loto_2970.csv",
+  "CSV": "/data/loto7_4696_k79_loto_2970.csv",
   "broj_izvlacenja": 2970,
   "poslednja": [
     4,
@@ -373,11 +371,11 @@ Successfully installed numpy-2.4.6
   ],
   "NEXT": [
     2,
-    10,
+    x,
     22,
-    29,
+    y,
     30,
-    33,
+    z,
     39
   ],
   "gamma": 2.0,
@@ -398,7 +396,7 @@ Successfully installed numpy-2.4.6
 
 
 {
-  "CSV": "/Users/4c/Desktop/GHQ/data/loto7_4696_k79_loto_plus_1726.csv",
+  "CSV": "/data/loto7_4696_k79_loto_plus_1726.csv",
   "broj_izvlacenja": 1726,
   "poslednja": [
     5,
@@ -411,11 +409,11 @@ Successfully installed numpy-2.4.6
   ],
   "NEXT": [
     2,
-    7,
+    x,
     8,
-    11,
+    y,
     23,
-    26,
+    z,
     34
   ],
   "gamma": 0.0,
